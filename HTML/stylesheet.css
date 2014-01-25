@@ -1,18 +1,28 @@
 body 
 {
-	background-image:url('http://3.bp.blogspot.com/_5iBBmSylHgM/S8cqFLyljRI/AAAAAAAAA2g/8zzPKgDayM0/s1600/bare%2Bfeet.JPG');
-	background-repeat:repeat-y;
-	background-position:center middle;	
-	background-size: 100% auto;	
+	background-image: url('http://3.bp.blogspot.com/_5iBBmSylHgM/S8cqFLyljRI/AAAAAAAAA2g/8zzPKgDayM0/s1600/bare%2Bfeet.JPG');
+	background-repeat: repeat-y;
+	background-position: center middle;	
+	background-size: 100% auto;
 }
+
 
 .Absolute-Center
  { 
- 	width: 50%;
+ 	font-family: Georgia;
+ 	width: 30%;
  	height: 50%;
-
  	overflow: auto;
  	margin: auto;
  	position: absolute;
  	top: 0; left: 0; bottom: 0; right: 0;
  } 
+
+ .trans-box
+ {
+ 	background-color:#165516;
+ 	opacity: 0.6;
+ 	box-shadow: 10px 10px 4px #203120;
+ 	border:2px solid;
+	border-radius:14px;
+ }

@@ -7,30 +7,39 @@
 	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
 </head>
 <body>
-	<h1 style="text-align= center"; font-size:20pt; color:#00FF00;>
-		2Shoe.Me
-	</h1>
-	<div class="Absolute-Center">
-		<form name="login" align="center" size="50" class="trans-box">
-			<font size="6">Username</font>
-			<input type="text" name="userid"/><br>
-			<font size="6">Password</font>
-			<input type="password" name="pswrd"/><br>
-			<input type="button" onclick="check(this.form)" value="Login"/>
-			<input type="reset" value="Cancel"/>
+	<div id="wrapper">
+		<form name="login-form" class="login-form"> <!-- action"login_form.asp" method='get'> -->
+			<div class="header">
+			<h1>Welcome to 2Shoe.me</h1>
+			<span>Fill out the form below to login, the perfected sized shoes are waiting! </span>
+			</div>
+
+			<div class="content">
+			<input name="user" type="text" class="input username" placeholder="Username" />
+			<div class="user-icon"></div>
+			<input name="pwd" type="password" class="input password" placeholder="Password" onkeydown="if (event.keyCode == 13) document.getElementById('login').click()" />
+			<div class="pass-icon"></div>		
+			</div>
+
+			<div class="footer">
+			<input type="button" name="login" value="Login" class="button" id="login" onclick="check(this.form, &quot;login&quot;);"></input>
+			<input type="button" name="register" value="Register" class="register" onclick="check(this.form, &quot;register&quot;);"></input>
+
+			</div>
 		</form>
 	</div>
 	<script language="javascript">
-	function check(form)/*function to check userid & password*/
-	{
-		/*the following code checkes whether the entered userid and password are matching*/
-		if(form.userid.value == "myuserid" && form.pswrd.value == "mypswrd")
-		{
-			window.open('target.html')/*opens the target page while Id & password matches*/
-		}
-		else
-		{
-			alert("Error Password or Username")/*displays error message*/
+	function check(form, buttonName) {
+		if (buttonName == "login") {
+			if(form.user.value == "caljep@sbcglobal.net" && form.pwd.value == "test123") {
+				window.location.href='dashboard.html'/*opens the dashboard on success*/
+			} else if(form.user.value == "andy.kittler@gmail.com" && form.pwd.value == "test123") {
+				window.location.href='dashboard.html'/*opens the dashboard on success*/
+			} else {
+				alert("Incorrect email or password!");
+			}
+		} else {
+			window.location.href='registration.html'/*opens the registration page*/
 		}
 	}
 	</script>

@@ -1,0 +1,18 @@
+body 
+{
+	background-image:url('http://3.bp.blogspot.com/_5iBBmSylHgM/S8cqFLyljRI/AAAAAAAAA2g/8zzPKgDayM0/s1600/bare%2Bfeet.JPG');
+	background-repeat:repeat-y;
+	background-position:center middle;	
+	background-size: 100% auto;	
+}
+
+.Absolute-Center
+ { 
+ 	width: 50%;
+ 	height: 50%;
+
+ 	overflow: auto;
+ 	margin: auto;
+ 	position: absolute;
+ 	top: 0; left: 0; bottom: 0; right: 0;
+ } 

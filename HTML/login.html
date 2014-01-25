@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		2 Shoe Me
+	</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+</head>
+<body>
+	<h1 style="text-align= center"; font-size:20pt; color:#00FF00;>
+		2Shoe.Me
+	</h1>
+	<div class="Absolute-Center">
+		<form name="login" align="center" size="60">
+			<font size="6">Username</font>
+			<input type="text" name="userid"/><br>
+			<font size="6">Password</font>
+			<input type="password" name="pswrd"/><br>
+			<input type="button" onclick="check(this.form)" value="Login"/>
+			<input type="reset" value="Cancel"/>
+		</form>
+	</div>
+	<script language="javascript">
+	function check(form)/*function to check userid & password*/
+	{
+		/*the following code checkes whether the entered userid and password are matching*/
+		if(form.userid.value == "myuserid" && form.pswrd.value == "mypswrd")
+		{
+			window.open('target.html')/*opens the target page while Id & password matches*/
+		}
+		else
+		{
+			alert("Error Password or Username")/*displays error message*/
+		}
+	}
+	</script>
+</body>
+</html>
